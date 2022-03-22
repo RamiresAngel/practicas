@@ -1,0 +1,42 @@
+<h1>Fibonacci</h1>
+<hr>
+<div class="col-row">
+  <form class="col-xs-12 col-sm-6 col-md-8">
+    <div class="form-control-textcol-xs-12 col-sm-6 col-md-8">
+      <label class="form-control-textcol-xs-12 col-sm-6 col-md-8">
+        Cual es tu Limite
+      </label>
+      <input type="text"
+             class="form-control-textcol-xs-12 col-sm-6 col-md-8"
+             placeholder="Arre PaPu"
+             #fibonacci="ngModel"
+             required
+             name="fibonacci"
+             maxlength="10"
+             ngModel pattern="[0-9]{1,10}"
+             onfocus="this.value=''"
+             [class.is-invalid]="fibonacci.invalid && fibonacci.touched"
+             [(ngModel)]="limite">
+             <br>
+             <samp *ngIf="fibonacci.invalid"
+                    class="col-xs-12 col-sm-6 col-md-8" >
+               solo numero
+             </samp>
+    </div>
+    <br>
+    <div>
+  <button type="submit"
+          class="btn btn-outline-success col-xs-12 col-sm-6 col-md-8"
+          [disabled]="!fibonacci.valid"
+         (click)="serieFibonacccci()">
+    hOoOoOoOoOo!!!
+  </button>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-12"
+     style="max-height: 200px; overflow-y: scroll;">La sucesión de Fibonacci
+    <span *ngFor="let item of array_fib; let i = index" >
+      <h2>   {{item}}  </h2>
+    </span>
+</div>
+</form>
+</div>

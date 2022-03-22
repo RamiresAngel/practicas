@@ -1,0 +1,48 @@
+<h1> Numeros pares </h1>
+<hr>
+
+<div class="form-group row">
+  <label class="col-xs-12 col-sm-6 col-md-8">
+    Numero </label>
+  <div name="form"  class="col-xs-12 col-sm-6 col-md-8">
+    <input class="col-xs-12 col-sm-6 col-md-8"
+           type="text"
+           placeholder="Numero"
+           onfocus="this.value = ''"
+           maxlength="5"
+           ngModel pattern="[0-9]{1,5}"
+           name="num-par"
+           #num_par="ngModel"
+           required
+           [class.is-invalid]="num_par.invalid && num_par.touched"
+           [(ngModel)]="operador">
+           <samp *ngIf="num_par.invalid"
+                  class="form-text text-danger">
+                  solo numeros </samp>
+  </div>
+  <br>
+
+
+<div>
+  <button class="col-xs-12 col-sm-6 col-md-8"
+          [disabled]="!num_par.valid"
+          type="submit"
+          class="btn btn-outline-primary"
+          (click)="ParRevercible()">
+    separar numero
+  </button>
+</div>
+<div
+      class="numero col-xs-12 col-sm-6 col-md-8"
+      style="max-height: 300px; overflow-y: scroll;">
+      <span *ngFor="let item of array_num_par ; let i = index "
+            class="col-xs-12 col-sm-1 col-md-1">
+          <br>
+        {{item}}
+
+      </span>
+
+ </div>
+</div>
+
+

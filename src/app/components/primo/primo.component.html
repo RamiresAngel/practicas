@@ -1,0 +1,56 @@
+<h1> Primo </h1>
+<hr>
+
+<div class="col-row">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <label class="form-control-textcol-md-12 col-xs-12 col-sm-6 col-md-8">
+     Piensalo bien por que costo mucho
+    </label>
+    <input class="col-xs-12 col-sm-6 col-md-8"
+           type="text"
+           name="primo"
+           [(ngModel)]="primo"
+           placeholder="introduce el numero limite"
+           maxlength="5"
+           ngModel pattern="[0-9]{1,5}"
+           onfocus="this.value=''"
+           #num_primo="ngModel"
+           [class.is-invalid]="num_primo.invalid && num_primo.touched">
+           <br>
+           <span *ngIf="num_primo.invalid"
+                 class="col-xs-12 col-sm-6 col-md-8">
+             solo numero
+           </span>
+  </div>
+
+  <br>
+
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <button class="col-xs-12 col-sm-6 col-md-8"
+            type="button"
+            class="btn btn-outline-success"
+            [disabled]="!num_primo.valid"
+            (click)="primoNumf()">
+      primo
+    </button>
+  </div>
+  <br>
+  <div class="col-xs-12 col-sm-6 col-md-3"
+       style="max-height: 200px;overflow-y: scroll;">
+       hay papa
+       <span *ngFor="let item of array_pri; let i = index">
+         <h6>
+           {{item}}
+         </h6>
+       </span>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+

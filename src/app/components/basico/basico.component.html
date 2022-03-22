@@ -1,0 +1,30 @@
+<h1>ejercicios Básicos</h1>
+<hr>
+<div class="form-group row">
+  <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
+    <h3>Libras a Kilos</h3>
+    <label class="col-7 mt-3">libras</label>
+    <input type="text" class="col-7" name="libra" maxlength="10" placeholder="Libra" onfocus="this.value = ''"
+      pattern="(?=.*\d)[0-9]{1,10}" #libra="ngModel" [(ngModel)]="libra_t" required>
+    <samp *ngIf="libra.errors?.pattern" class="form-text text-danger">Solo Números</samp>
+    <br>
+    <button type="button" class="btn btn-outline-danger mt-3" [disabled]="!libra.valid"
+      (click)="Convertir()">Convertir</button>
+    <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 mt-3 text-danger" style="max-height: 100px;">
+      Resultado: {{convercion_k}}
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 mt-5">
+    <h3>Kilómetros a millas</h3>
+    <label class="col-7 mt-3">Kilómetro</label>
+    <input type="text" class="col-7" name="kilometro" maxlength="10" placeholder="kilometro" onfocus="this.value = ''"
+      pattern="(?=.*\d)[0-9]{1,10}" #kilometro="ngModel" [(ngModel)]="kilometro_t" required>
+    <samp *ngIf="kilometro.errors?.pattern" class="form-text text-danger">Solo Números</samp>
+    <br>
+    <button type="button" class="btn btn-outline-danger mt-3" [disabled]="!kilometro.valid"
+      (click)="Convertir_milla()">Convertir</button>
+    <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 mt-3 text-danger" style="max-height: 100px;">
+      Resultado: {{convercion_m}}
+    </div>
+  </div>
+</div>

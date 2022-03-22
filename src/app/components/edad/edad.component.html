@@ -1,0 +1,43 @@
+<h1> Calcula la Edad </h1>
+<hr>
+
+<div class="col-row">
+  <label class="col-xs-12 col-sm-6 col-md-8">
+    Introducir fecha de nacimiento </label>
+  <div>
+
+
+    <input class="col-xs-12 col-sm-6 col-md-8"
+           type="text"
+           placeholder="Año de nacimiento"
+           ngModel pattern="[0-9]{4,4}"
+           maxlength="4"
+           onfocus="this.value = ''"
+           name="numero"
+           #numero="ngModel"
+           required
+          [class.is-invalid]="numero.invalid && numero.touched"
+          [(ngModel)]="nacimiento">
+          <br>
+    <samp *ngIf="numero.invalid"
+          class="col-xs-12 col-sm-6 col-md-8">
+      Igresa año (yyyy) </samp>
+  </div>
+  <br>
+
+
+
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <button [disabled]="!numero.valid"
+            type="text"
+            class="btn btn-outline-primary"
+            (click)="operador()">
+      Trabajando
+    </button>
+  </div>
+  <br>
+
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <h3>Tu edad es {{resultado}} años </h3>
+  </div>
+</div>

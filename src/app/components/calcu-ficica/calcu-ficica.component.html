@@ -1,0 +1,126 @@
+<h1> Calculadora</h1>
+<hr>
+
+<div class="container" id="container">
+  <br />
+
+  <table class="calculadora">
+    <tr>
+      <td colspan="4"><span id="resultado_2">{{pantalla}}</span></td>
+    </tr>
+    <tr>
+      <td colspan="4"><span id="resultado">{{resultado}}</span></td>
+    </tr>
+    <tr>
+      <td><button id="n7" (click)="obtenerEvenButton('7')">7</button></td>
+      <td><button id="n8" (click)="obtenerEvenButton('8')">8</button></td>
+      <td><button id="n9" (click)="obtenerEvenButton('9')">9</button></td>
+      <td><button id="opr" (click)="obtenerEvenButton('÷')">÷</button></td>
+    </tr>
+    <tr>
+      <td><button id="n4" (click)="obtenerEvenButton('4')">4</button></td>
+      <td><button id="n5" (click)="obtenerEvenButton('5')">5</button></td>
+      <td><button id="n6" (click)="obtenerEvenButton('6')">6</button></td>
+      <td><button id="opr" (click)="obtenerEvenButton('*')">*</button></td>
+    </tr>
+    <tr>
+      <td><button id="n1" (click)="obtenerEvenButton('1')">1</button></td>
+      <td><button id="n2" (click)="obtenerEvenButton('2')">2</button></td>
+      <td><button id="n3" (click)="obtenerEvenButton('3')">3</button></td>
+      <td><button id="opr" (click)="obtenerEvenButton('-')">-</button></td>
+    </tr>
+    <tr>
+      <td><button id="n0" (click)="obtenerEvenButton('0')">0</button></td>
+      <td><button id="reset" (click)="obtenerEvenButton('C')">C</button></td>
+      <td><button id="opr" (click)="obtenerEvenButton('=')">=</button></td>
+      <td><button id="opr" (click)="obtenerEvenButton('+')">+</button></td>
+    </tr>
+    <tr>
+      <td colspan="4"></td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+
+
+
+<!-- <div class="row">
+<div class="col-xl-10 col-sm-10 col-md-10 col-gl-10 text-center mt-5 calculadora" id="calculadora">
+  <div class="col-12 mt-3">
+      <input class="col-10 display-4" id="pantalla" [(ngModel)]="pantalla" name="pantalla" type="text" disabled>
+    </div>
+    <div class="row mt-5 mb-3">
+      <div class="col-3 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="limpiar"> CE
+        </button>
+      </div>
+      <div class="col-3 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="divi">÷
+        </button>
+      </div>
+      <div class="col-3 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="res">-
+        </button>
+      </div>
+      <div class="col-3 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="mult">x
+        </button>
+      </div>
+
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n7">7
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n8">8
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n9">9
+        </button>
+      </div>
+
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n4">4
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n5">5
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n6">6
+        </button>
+      </div>
+
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n1">1
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n2">2
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n3">3
+        </button>
+      </div>
+
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="n0">0
+        </button>
+      </div>
+      <div class="col-4 mt-3">
+        <button class="btn btn-outline-success btn-lg" id="+">+
+        </button>
+      </div>
+      <div class="col-4 mt-3 ">
+        <button class="btn btn-outline-success btn-lg" id="igual">=
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

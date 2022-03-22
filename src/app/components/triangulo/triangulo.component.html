@@ -1,0 +1,45 @@
+<h1> figura </h1>
+<hr>
+
+<div class="form-group row">
+  <label class="col-xs-12 col-sm-6 col-md-8">
+    Dame un número </label>
+  <div class="col-xs-12 col-sm-6 col-md-8" name="form" action=" " method="get">
+    <input class="col-xs-12 col-sm-6 col-md-8" type="text" name="numero_t" onfocus="this.value = ''"
+      placeholder="Numero" minlength="0" ngModel pattern="[0-9]{1,10}" required #numero_t="ngModel"
+      [(ngModel)]="contador">
+    <samp *ngIf="numero_t.invalid" class="form-text text-danger">
+      solo numeros </samp>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <label class="col-xs-12 col-sm-6 col-md-8">
+      Dame una letra </label>
+    <div name="form" action=" " method="get" class="col-xs-12 col-sm-6 col-md-8">
+      <input class="col-xs-12 col-sm-6 col-md-8" type="text" name="letra" maxlength="3" placeholder="Caracter deseado"
+        required [(ngModel)]="letra">
+
+    </div>
+    <br>
+
+    <button class="col-xs-12 col-sm-6 col-md-8" [disabled]="!numero_t.valid" type="submit"
+      class="btn btn-outline-primary" (click)="dibujarTriangulo()">
+      Dibujar Triangulo
+    </button>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <h1>
+      Aquí triangulo
+    </h1>
+  </div>
+
+  <div class="DibujarTriangulo col-xs-12 col-sm-6 col-md-8" style="max-height: 200px; overflow-y: scroll;">
+    <span *ngFor="let item  of array_triangulo; let i = index" class="col-xs-12 col-sm-6 col-md-8">
+      {{ item }}
+
+      <br>
+
+    </span>
+  </div>
+</div>

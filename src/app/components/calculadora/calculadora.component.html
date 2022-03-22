@@ -1,0 +1,55 @@
+<h1> Calculadora Básica </h1>
+<hr>
+
+<div class="col-xs-12 col-sm-6 col-md-8">
+  <label class="col-xs-12 col-sm-6 col-md-8">
+    Exponente 1 </label>
+
+  <div name="form-group" class="col-xs-12 col-sm-6 col-md-8">
+    <input class="col-xs-12 col-sm-6 col-md-8 " type="text" name="numero_1" placeholder="Primer Exponente" required
+      maxlength="10" ngModel pattern="[0-9]{1,10}" onfocus="this.value=''" #numero_1="ngModel"
+      [class.is-invalid]="numero_1.invalid && numero_1.touched" [(ngModel)]="expo_1">
+    <samp *ngIf="numero_1.invalid" class="invalid-feedback col-xs-12 col-sm-6 col-md-8">
+      solo números </samp>
+  </div>
+  <br>
+
+  <div class="col-row">
+    <label class="col-xs-12 col-sm-6 col-md-8" for="exampleFormControlSelect1">
+      Que operación realizaras</label>
+    <select class="col-xs-8 col-sm-6 col-md-3" [(ngModel)]="operador" required name="operador"
+      id="exampleFormControlSelect1">
+      <option value="">Seleccioné</option>
+      <option> + </option>
+      <option> - </option>
+      <option> * </option>
+      <option> / </option>
+    </select>
+  </div>
+  <br>
+
+  <label class="col-xs-12 col-sm-6 col-md-8">
+    Exponente 2 </label>
+
+  <div name="form-control" class="col-xs-12 col-sm-6 col-md-8">
+    <input class="from-control is-invalid col-xs-12 col-sm-6 col-md-8" type="text" placeholder="Segundo Exponente"
+      #numero_2="ngModel" id="validationServer03" required name="numero_2" maxlength="10" ngModel pattern="[1-9]{1,10}"
+      onfocus="this.value=''" [class.is-invalid]="numero_2.invalid && numero_2.touched " [(ngModel)]="expo_2">
+    <samp *ngIf="numero_2.invalid" class="invalid-feedback col-xs-12 col-sm-6 col-md-8">
+      solo números
+    </samp>
+  </div>
+  <br>
+  <div>
+    <button class="col-xs-12 col-sm-6 col-md-8" [disabled]="!numero_1.valid && !numero_2.valid" type="button"
+      class="btn btn-outline-success btn-lg" (click)="operacionMat()">
+      Haz la Magia
+    </button>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-12">
+    <span>
+      <h2>El resultado de tu operación es = {{respuesta}} {{infinity}} </h2>
+    </span>
+  </div>
+</div>
