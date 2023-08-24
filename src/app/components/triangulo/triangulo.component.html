@@ -2,9 +2,9 @@
 <hr>
 
 <div class="form-group row">
-  <label class="col-xs-12 col-sm-6 col-md-8">
-    Dame un número </label>
   <div class="col-xs-12 col-sm-6 col-md-8" name="form" action=" " method="get">
+    <label class="col-xs-12 col-sm-6 col-md-8">
+      Dame un número </label>
     <input class="col-xs-12 col-sm-6 col-md-8" type="text" name="numero_t" onfocus="this.value = ''"
       placeholder="Numero" minlength="0" ngModel pattern="[0-9]{1,10}" required #numero_t="ngModel"
       [(ngModel)]="contador">

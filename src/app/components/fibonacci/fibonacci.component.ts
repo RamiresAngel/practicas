@@ -6,14 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fibonacci.component.css']
 })
 export class FibonacciComponent implements OnInit {
-  // public suma_num: number;
-
   public limite:number;
   public i: number;
   public fib = [];
   public array_fib = new Array<number>();
+
   constructor() { }
+
   ngOnInit() { }
+
   // public serieFibonacci() {
   //   let r_1 = 1;
   //   let r_2 = 0;
@@ -32,6 +33,7 @@ export class FibonacciComponent implements OnInit {
   //     // console.log(index)
   //   }
   // }
+
   public serieFibonacccci() {
     this.array_fib =[];
     this.fib[0] = 0;
@@ -44,10 +46,7 @@ export class FibonacciComponent implements OnInit {
         break ;
       }
     }
-
   }
-
-
 }
   //   public formu_Facto (){
   //   this.array_multiplo = [];

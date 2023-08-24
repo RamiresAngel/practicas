@@ -9,6 +9,7 @@ import { NumParComponent } from './components/num-par/num-par.component';
 import { CalcuFicicaComponent } from './components/calcu-ficica/calcu-ficica.component';
 import { BasicoComponent } from './components/basico/basico.component';
 import { Routes } from '@angular/router';
+import { RickMortyComponent } from './components/rick-morty/rick-morty.component';
 
 
 
@@ -23,6 +24,7 @@ export const ROUTES: Routes = [
   { path: 'factoriales', component: FactorialesComponent },
   { path: 'calcu_fisica', component: CalcuFicicaComponent },
   { path: 'basico', component: BasicoComponent },
+  { path: 'rick-morty', component: RickMortyComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ]

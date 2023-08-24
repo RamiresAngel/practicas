@@ -19,6 +19,8 @@ import { FactorialesComponent } from './components/factoriales/factoriales.compo
 import { PrimoComponent } from './components/primo/primo.component';
 import { CalcuFicicaComponent } from './components/calcu-ficica/calcu-ficica.component';
 import { BasicoComponent } from './components/basico/basico.component';
+import { RickMortyComponent } from './components/rick-morty/rick-morty.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { BasicoComponent } from './components/basico/basico.component';
     PrimoComponent,
     CalcuFicicaComponent,
     BasicoComponent,
+    RickMortyComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { BasicoComponent } from './components/basico/basico.component';
     FormsModule,
     CommonModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
