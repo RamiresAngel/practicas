@@ -1,0 +1,24 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: green;">{{personaje?.name}}
+        </h5>
+      </div>
+      <div class="modal-body" style="color: cornflowerblue;">
+        <strong> Especie: {{personaje?.species}} </strong>
+        <br>
+        <strong>Genero: {{personaje?.gender }}</strong>
+        <br>
+        <strong>Estado: {{personaje?.status}}</strong>
+        <br>
+        <strong>Origen: {{personaje?.origin.name}}</strong>
+        <br>
+        <strong>Ubicacion: {{personaje?.location.name}}</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="hiddenModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

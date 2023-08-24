@@ -21,6 +21,7 @@ import { CalcuFicicaComponent } from './components/calcu-ficica/calcu-ficica.com
 import { BasicoComponent } from './components/basico/basico.component';
 import { RickMortyComponent } from './components/rick-morty/rick-morty.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalDescripcionComponent } from './components/compartidos/modal-descripcion/modal-descripcion.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     CalcuFicicaComponent,
     BasicoComponent,
     RickMortyComponent,
+    ModalDescripcionComponent,
   ],
   imports: [
     BrowserModule,

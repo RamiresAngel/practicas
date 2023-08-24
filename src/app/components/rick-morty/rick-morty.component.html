@@ -1,1 +1,77 @@
-<p>rick-morty works!</p>
+<div class="row">
+  <div class="col-12">
+    <h1>Rick and Morty</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h3>Filtro</h3>
+  </div>
+
+  <div class="col-md-4">
+    <label for="filtro">Nombre</label>
+    <input type="text" class="form-control" [(ngModel)]="filtro" (change)="filtrarPersonaje()">
+  </div>
+  <div class="col-md-4">
+    <label for="filtro">Especie</label>
+    <select class="form-control" [(ngModel)]="especie" (change)="filtrarEspecie()">
+      <option value="">Todos</option>
+      <option *ngFor="let especie of especies" [value]="especie">{{especie}}</option>
+    </select>
+  </div>
+
+</div>
+
+
+<div class="row mt-2">
+  <div class="col-12">
+    <h3>Personajes</h3>
+  </div>
+</div>
+
+<div class="row mt-3">
+
+  <!-- card personages -->
+  <div class="col-12" *ngIf="filtroPersonaje.length == 0 && filtroEspecie.length == 0">
+    <div class="card-columns">
+      <div class="card" *ngFor="let personaje of personages" (click)="verDetalle(personaje)">
+        <img src="{{personaje.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{personaje.name}}</h5>
+          <p class="card-text">{{personaje.species}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- card filtroPersonaje -->
+  <div class="col-12" *ngIf="filtroPersonaje.length > 0 || filtroEspecie.length == 0">
+    <div class="card-columns">
+      <div class="card" *ngFor="let personaje of filtroPersonaje" (click)="verDetalle(personaje)">
+        <img src="{{personaje.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{personaje.name}}</h5>
+          <p class="card-text">{{personaje.species}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  card para filtroEspecie -->
+  <div class="col-12" *ngIf="filtroEspecie.length > 0 || filtroPersonaje.length == 0">
+    <div class="card-columns">
+      <div class="card" *ngFor="let personaje of filtroEspecie" (click)="verDetalle(personaje)">
+        <img src="{{personaje.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{personaje.name}}</h5>
+          <p class="card-text">{{personaje.species}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<app-modal-descripcion [personaje]="personaje"></app-modal-descripcion>

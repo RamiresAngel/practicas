@@ -12,7 +12,7 @@ export class Info {
 
 export class Results {
   id: number;
-  name: string;
+  name?: string;
   status: string;
   species: string;
   type: string;
@@ -23,14 +23,34 @@ export class Results {
   episode = new Array<string>();
   url: string;
   created: string
+
+  constructor() {
+    this.episode = new Array<string>();
+    this.origin = new Origin();
+    this.location = new Location();
+    this.name = '';
+    this.status = '';
+    this.species = '';
+    this.gender = '';
+  }
 }
 
 export class Origin {
   name: string;
-  url: string
+  url: string;
+
+  constructor() {
+    this.name = '';
+    this.url = '';
+  }
 }
 
 export class Location {
   name: string;
-  url: string
+  url: string;
+
+  constructor() {
+    this.name = '';
+    this.url = '';
+  }
 }
